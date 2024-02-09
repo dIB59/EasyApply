@@ -8,6 +8,7 @@ addEventListener("click", (event) => {
     console.log(event.target.textContent);
     if (event.target.textContent.includes("Apply")) {
         console.log("Apply clicked");
+        logHTML();
     }
 
     if (event.target.textContent.includes("Save")) {
