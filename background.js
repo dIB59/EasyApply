@@ -5,14 +5,13 @@ function logHTML() {
 
 addEventListener("click", (event) => {
 
+    console.log(event.target.textContent);
     if (event.target.textContent.includes("Apply")) {
         console.log("Apply clicked");
-        console.log(event.target);
     }
 
     if (event.target.textContent.includes("Save")) {
         console.log("Save clicked");
-        console.log(event.target);
     }
 
 });
