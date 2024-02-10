@@ -1,14 +1,14 @@
-/** some */
+/** Logs All Text content within the page */
 function logHTML() {
-  const pageContent = Node.textContent;
-  console.log(pageContent);
+  const some = document.querySelector('main').textContent.trim();
+  console.log(some);
 }
 
 addEventListener('click', (event) => {
   console.log(event.target.textContent);
   if (event.target.textContent.includes('Apply')) {
-    console.log('Apply clicked');
     logHTML();
+    console.log('Apply clicked');
   }
 
   if (event.target.textContent.includes('Save')) {
