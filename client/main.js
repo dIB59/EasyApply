@@ -30,7 +30,10 @@ function getLinkedinJobDetails() {
 addEventListener('click', (event) => {
   if (event.target.textContent.includes('Save')) {
     console.log('Save button clicked');
-    console.log(getLinkedinJobDetails());
+    console.log(getLinkedinJobDetails().allDetails);
+    console.log(getLinkedinJobDetails().howYouMatch);
+    console.log(getLinkedinJobDetails().jobDetails);
+    console.log(getLinkedinJobDetails().companyDetails);
   }
 
   if (event.target.textContent.includes('Apply')) {
