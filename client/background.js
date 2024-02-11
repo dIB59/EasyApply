@@ -1,19 +1,25 @@
-/** Logs All Text content within the page */
-function logHTML() {
+/**
+ * Gets the job details from the LinkedIn job page
+ * when ypou click on the Apply or Save button
+ * @return {string} The job details
+ */
+function getLinkdenJobDetails() {
   const allDetails = document.querySelector('main')
-      .textContent.replace(/\s+/g, ' ').trim();
-  const jobDetails = document.getElementById('job-details').textContent.trim();
+      ?.textContent.replace(/\s+/g, ' ')
+      ?.trim();
+  const jobDetails = document.getElementById('job-details')
+      ?.textContent
+      ?.trim();
   console.log(allDetails);
-  console.log(jobDetails);
+
+  return jobDetails ?? 'No Job details found';
 }
 
 addEventListener('click', (event) => {
   if (event.target.textContent.includes('Apply')) {
-    logHTML();
-    console.log('Apply clicked');
+    console.log(getLinkdenJobDetails());
   }
   if (event.target.textContent.includes('Save')) {
-    logHTML();
-    console.log('Save clicked');
+    console.log(getLinkdenJobDetails());
   }
 });
