@@ -1,8 +1,7 @@
 /**
  * Gets the job details from the LinkedIn job page
- * when you click on the Apply or Save button.
- * @return {LinkedinJobDetails} The job details, including various information.
- */
+ * @return {LinkedinJobDetails} - The job details.
+*/
 function getLinkedinJobDetails() {
   const allDetails = document.querySelector('main')
       ?.textContent.replace(/\s+/g, ' ')
@@ -17,14 +16,14 @@ function getLinkedinJobDetails() {
       ?.textContent
       ?.trim() ?? 'No Company details found';
 
-  const linkedinJobDetails = {
+  const linkedinJobDetail = {
     allDetails,
     howYouMatch,
     jobDetails,
     companyDetails,
   };
 
-  return linkedinJobDetails;
+  return linkedinJobDetail;
 }
 
 addEventListener('click', (event) => {
